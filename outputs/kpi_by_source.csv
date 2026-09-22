@@ -1,0 +1,3 @@
+station_group,total_rows,rowlevel_failures,gap_failures,gap_failure_rate_pct
+current_2025,12000,3969,3128,20.68
+legacy_2016,6000,3000,7350,55.06

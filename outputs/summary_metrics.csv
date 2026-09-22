@@ -1,0 +1,7 @@
+kpi,value
+Overall quality pass rate (blended across all rules),76.66%
+Distinct records affected by at least one row-level rule (DQ003/DQ006/DQ007),6980
+Expected 15-min slots missing (DQ009),10478
+Critical-severity rules currently failing,1
+Total rows in extract,18000
+Sensors / logical streams covered,18

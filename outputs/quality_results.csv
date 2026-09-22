@@ -1,0 +1,10 @@
+check_date,rule_id,dimension,source,evaluated_count,failed_count,failure_rate,severity,status
+21-09-2026,DQ001,completeness,openaq_new_delhi_measurements,18000,0,0,critical,PASS
+21-09-2026,DQ002,completeness,openaq_new_delhi_measurements,18000,0,0,critical,PASS
+21-09-2026,DQ003,completeness,openaq_new_delhi_measurements,18000,18000,1,medium,FAIL
+21-09-2026,DQ004,uniqueness,openaq_new_delhi_measurements,18000,0,0,critical,PASS
+21-09-2026,DQ005,validity,openaq_new_delhi_measurements,18000,0,0,high,PASS
+21-09-2026,DQ006,validity,openaq_new_delhi_measurements,18000,6000,0.333333,high,FAIL
+21-09-2026,DQ007,consistency,openaq_new_delhi_measurements,972,969,0.996914,critical,FAIL
+21-09-2026,DQ008,consistency,openaq_new_delhi_measurements,18000,0,0,critical,PASS
+21-09-2026,DQ009,timeliness,openaq_new_delhi_measurements,24873,10478,0.42126,high,FAIL

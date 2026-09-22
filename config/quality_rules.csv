@@ -1,0 +1,12 @@
+rule_id,dimension,table,column,rule,severity,threshold,threshold_basis
+DQ001,completeness,parsed_flat,value_num,value is not null,critical,0%,Business rule: a measurement row with no reading has no analytical use
+DQ002,completeness,parsed_flat,sensor_id/parameter/unit,identifying fields are not null,critical,0%,Business rule: required for any aggregation or join
+DQ003,completeness,parsed_flat,coordinates/summary,column should carry usable station metadata,medium,provisional,No documented data contract found; flagged as provisional -- verify with OpenAQ export/API owner whether this field is expected to populate
+DQ004,uniqueness,parsed_flat,sensor_id + dt_from_utc,no duplicate (sensor_id timestamp) combination,critical,0%,Business rule: one row must represent one sensor-interval reading
+DQ005,validity,parsed_flat,value_num,value >= 0 for concentration/RH/speed parameters; RH in [0,100]; wind_direction in [0,360),high,0%,Physical/business rule -- these quantities cannot be negative or out of physical range
+DQ006,validity,parsed_flat,unit,a given parameter should resolve to one unit across the dataset,high,0%,Data-contract expectation: OpenAQ reports one canonical unit per parameter; multiple units for the same parameter indicates unmerged sources,
+DQ007,consistency,parsed_flat,no/no2/nox,NOx (nitrogen oxides) must be >= NO alone (NOx = NO + NO2 by chemical definition),critical,0%,Physical/chemical rule
+DQ008,consistency,parsed_flat,dt_from_utc/dt_to_utc,dt_to_utc must equal dt_from_utc + declared interval,critical,0%,Business rule: period window must match its own declared interval
+DQ009,timeliness,parsed_flat,dt_from_utc,observed 15-minute slots vs. slots expected between each sensor's own min/max timestamp,high,provisional -- 10% gap ceiling,No documented SLA found; provisional analytical threshold pending confirmation from the data/source owner
+DQ010,timeliness,parsed_flat,percentComplete/percentCoverage,self-reported coverage metadata should vary with actual observed gaps,medium,n/a - diagnostic rule,Flags whether the source's own completeness metadata can be trusted as a monitoring signal
+DQ011,anomaly,parsed_flat,value_num,value outside [Q1-3*IQR, Q3+3*IQR] computed per parameter+unit group,medium,provisional,No historical baseline available beyond this extract; IQR fence is a provisional analytical threshold

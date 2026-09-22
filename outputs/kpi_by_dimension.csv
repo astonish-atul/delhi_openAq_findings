@@ -1,0 +1,6 @@
+dimension,evaluated,failed,failure_rate_pct
+completeness,54000.0,18000.0,33.33
+consistency,18972.0,969.0,5.11
+timeliness,24873.0,10478.0,42.13
+uniqueness,18000.0,0.0,0.0
+validity,36000.0,6000.0,16.67
