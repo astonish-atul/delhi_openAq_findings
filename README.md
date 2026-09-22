@@ -1,5 +1,5 @@
 # OpenAQ New Delhi Measurements — Data-Quality Project
-## Check the attached report and deck for more detailed 
+## Check the attached report and deck for more detailed info
 ## Headline findings
 1. Two monitoring deployments (2016 legacy station, 2025 current station) are merged in
    one file with no station/location field to distinguish them.
