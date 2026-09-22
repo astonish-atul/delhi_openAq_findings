@@ -32,5 +32,5 @@ provides a scorecard for ongoing monitoring.
 - Changing source-system (OpenAQ / sensor vendor) logic
 
 **Data source**
-`openaq_new_delhi_measurements.xls` (tab-separated OpenAQ sensor-measurement export),
-18,000 rows, provided by the user for this project.
+`openaq_new_delhi_measurements.xls,
+18,000 rows
